@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shield upgrades for Quantum materials research at the University of Oregon</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #fdfdfd;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        main {
+            max-width: 75ch;
+            width: 100%;
+        }
+        h1, h2 {
+            font-family: 'Helvetica Neue', sans-serif;
+            font-weight: 300;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+        h2 {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-top: 0;
+            margin-bottom: 3rem;
+        }
+        figure {
+            margin: 0 0 2rem 0;
+            padding: 0;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+        
+        /* --- REFACTORED VISIBILITY STYLES START --- */
+        
+        /* Default state for all interactive sections.
+           They are invisible and not displayed, so they don't take up space. */
+        .interactive-section {
+            opacity: 0;
+            transform: translateY(10px); /* Subtle slide-up animation */
+            transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+            display: none; /* Prevents interaction and layout shifts */
+        }
+
+        /* The .visible class triggers the fade-in and slide-up animation.
+           This class is now specific enough to override the default state. */
+        .interactive-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+            display: block; /* Makes the section visible and occupy space */
+        }
+
+        /* --- REFACTORED VISIBILITY STYLES END --- */
+        
+        .choice-button {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            border: 1px solid #3498db;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #3498db;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .choice-button:hover {
+            background-color: #3498db;
+            color: #fff;
+        }
+        .chosen {
+            background-color: #2ecc71 !important;
+            color: #fff !important;
+            border-color: #2ecc71 !important;
+        }
+        .faded {
+            opacity: 0.2;
+            pointer-events: none;
+            transition: opacity 1s;
+        }
+        .restart-button {
+            display: block;
+            margin: 3rem auto 0;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+            background-color: #e74c3c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .restart-button:hover {
+            background-color: #c0392b;
+        }
+        .caption {
+            font-style: italic;
+            color: #777;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <h1>A Quest for Quantum Silence</h1>
+        <h2>A story in super-position</h2>
+
+        <figure id="hero" class="interactive-section">
+            <img src="quantum-shield.jpg" alt="A close-up view of the gold-plated copper quantum shield inside the cryogenic experiment setup.">
+            <figcaption class="caption">The interior of the expermental chambor of the BlueFors 1K Cryostat, before the newly installed OFHC copper shielding.</figcaption>
+        </figure>
+
+        <section id="intro" class="interactive-section">
+            <p>In a windowless basement laboratory of the Lewis Integrative Science Building, Professor Nik Zhelev's lab is on a quest for the ultimate quiet. Not the absence of sound, but the absence of... everything. This basement is a prime location for this endeavor as the vibrations in the floors are lowest here, ambient light can not reach us sans the windows, and temperatures are always most stable in these rooms do to the themal damping of the surrounding concrete. This is the perfect place to study the fragile, fleeting nature of quantum materials and qubits. But we need more, we need to build a sanctuary, a space shielded from the chaotic noise of our classical world. Recently, they completed a crucial component: A final inner shield that exists at the very center of a nested structure, like a set of Russian Matryoshka dolls, designed to create a progressively quieter and more stable environment as one moves inward.</p>
+            <p>But how we tell this story is, for now, in a state of superposition. The narrative is a haze of possibilities, waiting for you, the observer, to collapse it into a single reality. Your choice will determine the path we take.</p>
+            <p class="caption">Click a path below to begin the experiment.</p>
+        </section>
+
+        <section id="path-choice" class="interactive-section">
+            <button class="choice-button" onclick="makeChoice('path-choice', 'gamer-path')"><strong>Path 1:</strong> New Epic Gear Dropped in Zhelev's Lab</button>
+            <button class="choice-button" onclick="makeChoice('path-choice', 'philosopher-path')"><strong>Path 2:</strong> The Quietest Place in Oregon</button>
+        </section>
+
+        <section id="gamer-path" class="content-section interactive-section">
+            <h2>Shield Leveled Up: +100 Cryo Defense</h2>
+            <figure>
+                <img src="IMG2_Shield.png" alt="The gleaming gold quantum shield.">
+            </figure>
+            <p>In the high-stakes quest of quantum computing, Professor Nik Zhelev's lab just acquired some epic-tier armor. This isn't your standard vendor gear. Forged by the holders of apocrypyl talents, craftspeople of the OFAD Instrument Shop, this multi-layered, OFHC copper shield provides a massive buff against environmental damage.</p>
+            <p>In the world of quantum mechanics, the main boss isn't a dragon; it's decoherence. Stray photons and magnetic fields are like a constant damage-over-time (DoT) effect, corrupting the fragile quantum states, or qubits, that are the heart of the experiment. This new shield is a high-resistance cloak, designed to bring that DoT down to zero.</p>
+            <p>The mission? To explore the strange physics inside a cryogenic dilution refrigerator, a machine that chills materials to less than 20 millikelvin—a temperature colder than deep space. With their new gear equipped, the Zhelev team is ready to face the next level of quantum discovery.</p>
+            <div class="choice-section" id="dialogue-choice-1">
+                <p class="caption">The final piece was installed. A new PhD candidate, fresh to the lab, saw the gleaming copper and couldn't contain their excitement. How did they express it?</p>
+                <!-- !REWRITE BRANCH! -->
+                <button class="choice-button" onclick="makeChoice('dialogue-choice-1', 'ofad-dialogue')">Express interest in OFAD and it's purpose.</button>
+                <!-- !END REWRITE BRANCH! -->
+                <button class="choice-button" onclick="makeChoice('dialogue-choice-1', 'flex-dialogue')">Hurl accolades across the generation gap.</button>
+            </div>
+        </section>
+
+        <section id="philosopher-path" class="content-section interactive-section">
+            <h2>If a Qubit Decoheres in a Void, Does It Process Information?</h2>
+            <figure>
+                <img src="Zen3.png" alt="A part of the shield in its forming tool.">
+            </figure>
+            <p>To plumb the universe for depths that reveal it's most fundamental properties, you must first build a place of profound emptiness. In the basement of the LISB, Professor Nik Zhelev's lab has just finished constructing a man-made void, a sensory deprivation tank to study quantum materials and cubits that may someday be part of a quantum computer.</p>
+            <p>The experiment itself lives inside a dilution refrigerator, an environment cooled to near absolute zero (<20 mK), where the frantic dance of atoms is slowed to a near standstill. But even this cold is not enough. The universe is filled with an invisible, incessant chatter: stray photons, cosmic rays, the faint magnetic whispers of the building's wiring. To a delicate qubit, held in a fragile superposition of states, this noise is a deafening roar that can shatter its quantum coherence in an instant.</p>
+            <p>The solution is a shield of profound isolation. Forged in the OFAD Instrument Shop from the purest oxygen-free copper, it is more than a piece of metal. It is the wall of a silent monastery, a place where a quantum state can exist, undisturbed, long enough for us to learn its secrets.</p>
+            <div class="choice-section" id="dialogue-choice-2">
+                <p class="caption">As the final, gleaming piece was installed, a new PhD candidate, excited to see the project come to completion, turned to one of the OFAD employees who built it. What did they say?</p>
+                <!-- !REWRITE BRANCH! -->
+                <button class="choice-button" onclick="makeChoice('dialogue-choice-2', 'ofad-dialogue')">Learn more about other projects in the OFAD shops</button>
+                <!-- !END REWRITE BRANCH! -->
+                <button class="choice-button" onclick="makeChoice('dialogue-choice-2', 'flex-dialogue')">Offer accolades that barley make it accross the generation gap.</button>
+            </div>
+        </section>
+
+        <!-- The new branch content is added here -->
+        <section id="ofad-dialogue" class="content-section interactive-section">
+            <h2>Research Section VI: A Call For Support</h2>
+            <p>A new PhD student, still getting to know the campus's resources, stood at workbench, looked on a the copper shield was assembled. "Wow, this custom piece for my experiment is perfect! It's so well-made and exactly what I needed. Sure is nice the UO research community has facilities like OFAD for custom work like this."</p>
+            <p>An OFAD instrument machinist, with decades of experience at the university, smiled faintly. "You know, OFAD, or Oregon Fabrication and Design, has a rich history here. It actually evolved from what was known for decades as the Technical Science Administration, or TSA. We rebranded for obvious reasons. Probably should have done it sooner. It's been a core facility on campus for over 30 years, providing essential support to researchers across so many disciplines."</p>
+            <p>He continued, "Back then, and still today, the mission was clear: to enable the real-world success of scientists, designers, and artists by giving them access to tools and expertise. Think of it as shortening the time it takes to go from a brilliant idea to a physical, working prototype. It's truly a unique and vital resource."</p>
+            <p>"Unfortunately, even vital resources like OFAD aren't immune to the financial pressures facing the university. UO is currently grappling with a significant budget challenge, and we’re seeing changes to federal research funding with a push from the current administration to significantly cut funding for basic research. It's why protecting these unique resources is so important—they are the heart of what makes UO a leading research institution."</p>
+             <div class="choice-section" id="ofad-explanation-choice">
+                 <p class="caption">This entire project is about protecting a quantum state. But what is that, exactly?</p>
+                 <button class="choice-button" onclick="makeChoice('ofad-explanation-choice', 'explanation')">Explain Superposition & Decoherence</button>
+            </div>
+        </section>
+
+
+        <section id="flex-dialogue" class="content-section interactive-section">
+            <h2>The Flex</h2>
+            <p>An instrument machinist from the OFAD shop, a person who has spent endless days speaking in tolerances of thousandths of an inch, removed his bifocals he was wearing to tap tiny metric holes around the edge of a copper flange. He’d spent today carefully assembling the nested layers of an anealed copper shield.</p>
+            <p>A new PhD student, barely old enough to remember a world without smartphones, stared at the finished product. The polished, surface gleamed in the natural light comging in through the windows.</p>
+            <p>"This might be the last time this thing see's any photons born from Sol, from now on it's just regurgitated light from sterile LED's down in Nik's Lab" the machinist mumbled, mostly to himself.</p>
+            <p>"Nice flex!" the student said, nodding with approval.</p>
+            <p>The machinist paused, a bemused look on his face. He ran a hand over the smooth, cold metal. "Flex? It shouldn't have that much anymore. The cylindrical shape we formed it into provides stuctural rigiditiy," he said, his brow furrowed. "This is oxygen-free high-conductivity copper. It's annealed to be soft, sure, it made forming it easier and does'nt hurt for better thermal contact, but once it's bolted down at 20 millikelvin, it's not going to be flexing anywhere."</p>
+            <p>The student blinked, a slow smile spreading across their face. "Right. No, I mean... it's a flex. Like, showing off. It's just... really, really cool."</p>
+            <p>The machinist stared at the shield, then back at the student, a flicker of understanding in his eyes. He gave a wry exhale, with the slightest back and forth shake of his head. "Well, I suppose we are showing off a little. What say we bag everything up to keep it clean and bring it to it's new home now."</p>
+            <div class="choice-section" id="explanation-choice">
+                 <p class="caption">This entire project is about protecting a quantum state. But what is that, exactly?</p>
+                 <button class="choice-button" onclick="makeChoice('explanation-choice', 'explanation')">Explain Superposition & Decoherence</button>
+            </div>
+        </section>
+        
+        <section id="explanation" class="content-section interactive-section">
+            <h2>The Quantum Tightrope</h2>
+            <p>Imagine a spinning coin. Before it lands, it's not truly heads and it's not truly tails—it's in a fuzzy, probabilistic combination of both. This is the essence of <strong>superposition</strong>. A qubit, the fundamental unit of quantum information, can be a 0, a 1, or both at the same time, holding vastly more information than a classical bit.</p>
+            <p>This powerful state, however, is incredibly fragile. The slightest interaction with the outside world—a single stray photon, a tiny vibration, a fluctuation in a magnetic field—can "observe" the qubit and force it to choose a state. The coin lands. The superposition is lost, and the quantum information "decoheres" into a boring, classical 0 or 1. This collapse is called <strong>decoherence</strong>.</p>
+            <p>The shield built for Professor Zhelev's lab is an act of extreme preservation. By blocking out all external noise, it allows the qubits to remain on their quantum tightrope, in a state of pure superposition, for as long as possible, giving scientists a precious window to perform their experiments.</p>
+             <button class="restart-button" onclick="location.reload()">Start the Experiment Over</button>
+        </section>
+        
+    </main>
+
+    <script>
+        /**
+         * REFACTORED SCRIPT
+         * This script now handles all visibility logic without external libraries.
+         * It uses a standard 'DOMContentLoaded' event to kick things off reliably.
+         */
+
+        // This function is called when a user clicks a path or dialogue choice.
+        function makeChoice(choiceSectionId, nextSectionId) {
+            const choiceSection = document.getElementById(choiceSectionId);
+            const buttons = choiceSection.getElementsByClassName('choice-button');
+            
+            // Fade out the unchosen buttons and highlight the chosen one.
+            for (let button of buttons) {
+                if (event.currentTarget.isEqualNode(button)) {
+                    button.classList.add('chosen');
+                } else {
+                    button.classList.add('faded');
+                }
+            }
+            
+            // Prevent more clicks on the same set of choices.
+            choiceSection.style.pointerEvents = 'none';
+
+            // Wait for the button fade animation, then reveal the next section.
+            setTimeout(() => {
+                const nextSection = document.getElementById(nextSectionId);
+                if (nextSection) {
+                    // Just add the .visible class. The CSS handles the animation.
+                    nextSection.classList.add('visible');
+                    nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 800);
+        }
+
+        // Run this script once the entire page document is loaded and ready.
+        document.addEventListener('DOMContentLoaded', () => {
+            // Define the IDs of the sections that should appear on page load.
+            const initialVisibleElements = ['#hero', '#intro', '#path-choice'];
+            
+            // Use a short timeout to allow the page to render before fading in.
+            setTimeout(() => {
+                initialVisibleElements.forEach(selector => {
+                    const element = document.querySelector(selector);
+                    if (element) {
+                        element.classList.add('visible');
+                    }
+                });
+            }, 100); // A brief 100ms delay.
+        });
+    </script>
+</body>
+</html>
