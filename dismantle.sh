@@ -4,7 +4,7 @@
 # Deconstructs the HTML story file into editable parts.
 
 # The source HTML file.
-SOURCE_HTML="superposition_choose_your_own_adventure.html"
+SOURCE_HTML="index.html"
 # The directory to store the parts.
 OUTPUT_DIR="story_parts"
 
