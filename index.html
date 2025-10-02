@@ -124,7 +124,7 @@
 <body>
 
     <main>
-        <h1>A Tale for Quantum Silence</h1>
+        <h1>A Tale of Quantum Silence</h1>
         <h2>A story in super-position</h2>
 
         <figure id="hero" class="interactive-section">
@@ -155,7 +155,7 @@
             <div class="choice-section" id="dialogue-choice-1">
                 <p class="caption">The final piece installed, a new PhD candidate, fresh to the lab, saw the gleaming copper and couldn’t contain their excitement. How did they express it?</p>
                 <!-- !REWRITE BRANCH! -->
-                <button class="choice-button" onclick="makeChoice('dialogue-choice-1', 'ofad-dialogue')">Express interest in OFAD and it's purpose.</button>
+                <button class="choice-button" onclick="makeChoice('dialogue-choice-1', 'old-meets-new')">Express interest in OFAD and it's purpose.</button>
                 <!-- !END REWRITE BRANCH! -->
                 <button class="choice-button" onclick="makeChoice('dialogue-choice-1', 'flex-dialogue')">Hurl accolades across the generation gap.</button>
             </div>
@@ -174,14 +174,14 @@
                 <!-- !REWRITE BRANCH! -->
                 <button class="choice-button" onclick="makeChoice('dialogue-choice-2', 'ofad-dialogue')">Learn more about other projects in the OFAD shops</button>
                 <!-- !END REWRITE BRANCH! -->
-                <button class="choice-button" onclick="makeChoice('dialogue-choice-2', 'flex-dialogue')">Offer accolades that barley make it accross the generation gap.</button>
+                <button class="choice-button" onclick="makeChoice('dialogue-choice-2', 'flex-dialogue')">Offer accolades that bareley make it accross the generation gap.</button>
             </div>
         </section>
 
         <!-- The new branch content is added here -->
         <section id="ofad-dialogue" class="content-section interactive-section">
             <h2>Research Section VI: A Call For Support</h2>
-            <p>A new PhD student, still getting to know the campus's resources, stood at workbench, looked on a the copper shield was assembled. "Wow, this custom piece for my experiment is perfect! It's so well-made and exactly what I needed. Sure is nice the UO research community has facilities like OFAD for custom work like this."</p>
+            <p>A new PhD student, still getting to know the campus's resources, stood at the workbench, looking on as the copper shield was assembled. "Wow, this custom piece for our experiment is perfect! It's so well-made and exactly what I needed. Sure is nice the UO research community has facilities like OFAD for custom work like this."</p>
             <p>An OFAD instrument machinist, with decades of experience at the university, smiled faintly. "You know, OFAD, or Oregon Fabrication and Design, has a rich history here. It actually evolved from what was known for decades as the Technical Science Administration, or TSA. We rebranded for obvious reasons. Probably should have done it sooner. It's been a core facility on campus for over 30 years, providing essential support to researchers across so many disciplines."</p>
             <p>He continued, "Back then, and still today, the mission was clear: to enable the real-world success of scientists, designers, and artists by giving them access to tools and expertise. Think of it as shortening the time it takes to go from a brilliant idea to a physical, working prototype. It's truly a unique and vital resource."</p>
             <p>"Unfortunately, even vital resources like OFAD aren't immune to the financial pressures facing the university. UO is currently grappling with a significant budget challenge, and we’re seeing changes to federal research funding with a push from the current administration to significantly cut funding for basic research. It's why protecting these unique resources is so important—they are the heart of what makes UO a leading research institution."</p>
@@ -191,6 +191,20 @@
             </div>
         </section>
 
+        <!-- The new branch content is added here -->
+        <section id="old-meets-new" class="content-section interactive-section">
+            <h2>Where Old Meets New, or, 0s and 1s But Never 2s</h2>
+            <p>A new PhD student, still getting to know the University of Oregon campus, stood at workbench, looking down on the custom copper shield before it was mounted onto the cryostat. “Wow, this is perfect! When we figured out that the cryostat’s off-the-shelf shielding wasn’t going to cut it for studying qubits at the temperature we needed, I was so relieved to learn that a place exists on campus to make a shield to spec like this.”</p>
+            <p>Though some might regard the skills of an instrument machinist antiquated when surrounded by machinery aimed at decoding the secrets of quantum computing, our story of the copper shield is rather an example of human ingenuity and mixing the hands-on work of manufacturing with academic research.</p>
+            <p>OFAD, one of the university’s core research facilities, began as a machine shop housing such tools as lathes and drill presses. But as technology has evolved, OFAD has also become host to the newest tools of the trade, including laser cutters, polymer and composite 3D printers, and CNC bed mills.</p>            
+            <p>Standing beside the PhD student, an OFAD instrument machinist smiles at the admiration of his work. “Back when our shop was founded, and still today, the mission was clear: To enable the real-world success of scientists, designers, and artists by giving them access to tools and expertise. It’s my job to help people shorten the time it takes to go from a brilliant idea to a physical, working prototype. It's truly a unique and vital resource.”</p>            
+            <p>"Unfortunately, even vital resources like OFAD aren’t immune to the financial pressures facing the university. The UO is currently grappling with a significant budget challenge, and we’re seeing changes to federal research funding that threaten to significantly cut funding for “basic research”—fundamental research that establishes understanding of a previously unexplained phenomena or helps create a theory about how something works. In other words, exactly the kind of research that OFAD enables. That’s why protecting these unique resources is so important—they are the heart of what makes UO a leading research institution helping to solve society’s most pressing problems. Making the monumental leap from our current computing capabilities—in which units of data are confined to 0s and 1s, yes or no, on or off—to those of quantum computing—where those units of data, qubits, exist in superposition, which is a state anywhere between 0 and 1 and undefined until measured—promises to enable a new era of computing power many times faster than what’s now possible.</p>
+
+             <div class="choice-section" id="ofad-explanation-choice">
+                 <p class="caption">This entire project is about protecting a quantum state. But what is that, exactly?</p>
+                 <button class="choice-button" onclick="makeChoice('ofad-explanation-choice', 'explanation')">Explain Superposition & Decoherence</button>
+            </div>
+        </section>
 
         <section id="flex-dialogue" class="content-section interactive-section">
             <h2>The Flex</h2>
