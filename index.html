@@ -450,6 +450,7 @@
                 const nextSection = document.getElementById(nextSectionId);
                 if (nextSection) {
                     // Just add the .visible class. The CSS handles the animation.
+                    nextSection.style.display = 'block'; // Explicitly set display to override inline style
                     nextSection.classList.add('visible');
                     nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     updateGoBackButtons();
