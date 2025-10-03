@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shield upgrades for Quantum materials research at the University of Oregon</title>
+    <style>
+        :root {
+            --transition-duration: 1.2s;
+            --transition-timing-function: ease-out;
+        }
+    </style>
     <style>
         body {
             font-family: 'Georgia', serif;
@@ -20,19 +27,19 @@
             width: 100%;
         }
         h1, h2 {
-            font-family: 'Helvetica Neue', sans-serif;
+            font-family: 'Source Sans Pro', sans-serif;
             font-weight: 300;
             text-align: center;
             letter-spacing: 1px;
         }
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.0rem;
             margin-bottom: 0.5rem;
             color: #2c3e50;
         }
         h2 {
-            font-size: 1.2rem;
-            color: #7f8c8d;
+            font-size: 1.5rem;
+            color: #212020;
             margin-top: 0;
             margin-bottom: 3rem;
         }
@@ -54,7 +61,7 @@
         .interactive-section {
             opacity: 0;
             transform: translateY(10px); /* Subtle slide-up animation */
-            transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+            transition: opacity var(--transition-duration) var(--transition-timing-function), transform var(--transition-duration) var(--transition-timing-function);
             display: none; /* Prevents interaction and layout shifts */
         }
 
@@ -113,6 +120,23 @@
         .restart-button:hover {
             background-color: #c0392b;
         }
+        .back-button {
+            display: block;
+            margin: 2rem auto 0;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #777;
+            background-color: transparent;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .back-button:hover {
+            background-color: #eee;
+            color: #333;
+        }
         .caption {
             font-style: italic;
             color: #777;
@@ -125,7 +149,7 @@
 
     <main>
         <h1>A Tale of Quantum Silence</h1>
-        <h2>A story in super-position</h2>
+        <h2>A story in super position</h2>
 
         <figure id="hero" class="interactive-section">
             <img src="quantum-shield.jpg" alt="A close-up view of the gold-plated copper quantum shield inside the cryogenic experiment setup.">
@@ -154,11 +178,11 @@
             <p>The mission? To explore the strange physics inside a cryogenic dilution refrigerator, a machine that chills materials to less than 20 millikelvin (<20 mK)—a temperature colder than deep space. With their new gear equipped, the Zhelev team is ready to face the next level of quantum discovery.</p>
             <div class="choice-section" id="dialogue-choice-1">
                 <p class="caption">The final piece installed, a new PhD candidate, fresh to the lab, saw the gleaming copper and couldn’t contain their excitement. How did they express it?</p>
-                <!-- !REWRITE BRANCH! -->
                 <button class="choice-button" onclick="makeChoice('dialogue-choice-1', 'old-meets-new')">Express interest in OFAD and it's purpose.</button>
-                <!-- !END REWRITE BRANCH! -->
                 <button class="choice-button" onclick="makeChoice('dialogue-choice-1', 'flex-dialogue')">Hurl accolades across the generation gap.</button>
+                <button class="choice-button" onclick="makeChoice('dialogue-choice-1', 'gummy-path')">Can you walk and chew gum at the same time?</button>
             </div>
+            <button class="back-button" onclick="goBack()">Go Back</button>
         </section>
 
         <section id="philosopher-path" class="content-section interactive-section">
@@ -171,14 +195,12 @@
             <p>The solution is a shield of profound isolation. Forged in the OFAD instrument shop from the purest oxygen-free copper, it is more than a piece of metal. It is the wall of a silent monastery, a place where a quantum state can exist, undisturbed, long enough for us to learn its secrets.</p>
             <div class="choice-section" id="dialogue-choice-2">
                 <p class="caption">As the final, gleaming piece was installed, a new PhD student, excited to see the project come to completion, turned to one of the OFAD machinists who built it. What did they say?</p>
-                <!-- !REWRITE BRANCH! -->
-                <button class="choice-button" onclick="makeChoice('dialogue-choice-2', 'ofad-dialogue')">Learn more about other projects in the OFAD shops</button>
-                <!-- !END REWRITE BRANCH! -->
+                <button class="choice-button" onclick="makeChoice('dialogue-choice-2', 'old-meets-new')">Learn more about the OFAD shops</button>
                 <button class="choice-button" onclick="makeChoice('dialogue-choice-2', 'the-ultimate-warrior')">THE ULTIMATE WARRIOR</button>
             </div>
+            <button class="back-button" onclick="goBack()">Go Back</button>
         </section>
 
-        <!-- The new branch content is added here -->
         <section id="ofad-dialogue" class="content-section interactive-section">
             <h2>Research Section VI: A Call For Support</h2>
             <figure>
@@ -193,9 +215,9 @@
                  <p class="caption">This entire project is about protecting a quantum state. But what is that, exactly?</p>
                  <button class="choice-button" onclick="makeChoice('ofad-explanation-choice', 'explanation')">Explain Superposition & Decoherence</button>
             </div>
+            <button class="back-button" onclick="goBack()">Go Back</button>
         </section>
 
-        <!-- The new branch content is added here -->
         <section id="old-meets-new" class="content-section interactive-section">
             <h2>Where Old Meets New, or, 0s and 1s But Never 2s</h2>
             <figure>
@@ -212,23 +234,23 @@
                  <p class="caption">This entire project is about protecting a quantum state. But what is that, exactly?</p>
                  <button class="choice-button" onclick="makeChoice('ofad-explanation-choice', 'explanation')">Explain Superposition & Decoherence</button>
             </div>
+            <button class="back-button" onclick="goBack()">Go Back</button>
         </section>
 
         <section id="the-ultimate-warrior" class="content-section interactive-section">
-            <h2>THE ULTIMATE WARRIOR</h2>
+            <h2>The Quantum Testbed</h2>
             <figure>
-                <img src="index_files/the-ultimate-warrior_image1.png" alt="the-ultimate-warrior_image1.png">
-                <figcaption class="caption">the-ultimate-warrior_image1.png</figcaption>
+                <img src="index_files/the-ultimate-warrior_image1.png" alt="A view of the experimental setup.">
+                <figcaption class="caption">A view of the experimental setup.</figcaption>
             </figure>
-            <p>A new PhD student, watching the final assembly, felt a surge of adrenaline. The polished copper wasn't just a component; it was a gladiator's shield, forged for a battle against the universe itself.</p>
-            <p>"This isn't just a shield," the student declared, their voice low with intensity. "This is the armor for the ultimate warrior. We're going into battle against the chaos of the cosmos, and this is our only defense."</p>
-            <p>The OFAD machinist, who had seen generations of students come and go, looked up from his work. He'd spent his life fighting his own battles against the stubbornness of metal and the unforgiving laws of physics. He saw not a student, but a fellow warrior preparing for the fray.</p>
-            <p>"Every scientist is a warrior in their own right," the machinist replied, his voice raspy from years in the shop. "You fight for knowledge. We fight to give you the weapons you need. This shield... it's the sharpest blade we could forge for you. May it protect you in the darkness."</p>
-            <p>He placed a hand on the gleaming surface. "Now go. Your war against decoherence awaits."</p>
+            <p>Professor Zhelev's lab is a testbed for quantum materials and a hub for experiential learning. Here, students and researchers work together, pushing the boundaries of what's possible in the quantum realm. The lab is equipped with a powerful dilution refrigerator and a suite of radio-frequency electronics, allowing for precise communication with the quantum world.</p>
+            <p>With the new shield installed, the lab is now an even more effective sanctuary from the noise of the classical world. Inside this quiet space, researchers can 'tiddle' qubits—gently manipulating them with electromagnetic fields—and listen for their responses. This process of probing and measuring is at the heart of basic research in quantum science, providing valuable insights into the behavior of these strange and powerful particles.</p>
+            <p>The work done in this lab is not just about exploring the fundamental nature of reality; it's also about training the next generation of quantum engineers and scientists. The hands-on experience gained here is invaluable, preparing students for careers in the rapidly growing quantum technology industry. To learn more about the program, visit the <a href="https://quantumtech.uoregon.edu/" target="_blank">UO Quantum Technology Master’s Internship Program</a>.</p>
             <div class="choice-section" id="warrior-explanation-choice">
                  <p class="caption">This entire project is about protecting a quantum state. But what is that, exactly?</p>
                  <button class="choice-button" onclick="makeChoice('warrior-explanation-choice', 'explanation')">Explain Superposition & Decoherence</button>
             </div>
+            <button class="back-button" onclick="goBack()">Go Back</button>
         </section>
 
         <section id="flex-dialogue" class="content-section interactive-section">
@@ -249,6 +271,23 @@
                  <p class="caption">This entire project is about protecting a quantum state. But what is that, exactly?</p>
                  <button class="choice-button" onclick="makeChoice('explanation-choice', 'explanation')">Explain Superposition & Decoherence</button>
             </div>
+            <button class="back-button" onclick="goBack()">Go Back</button>
+        </section>
+        
+        <section id="gummy-path" class="content-section interactive-section">
+            <h2>The Machinist's Gambit: Taming "Gummy" Copper</h2>
+            <figure>
+                <img src="index_files/gamer-path_image1.png" alt="A schematic of the quantum shield.">
+                <figcaption class="caption">Even the most advanced designs rely on fundamental machining skill.</figcaption>
+            </figure>
+            <p>It might sound strange, but in the OFAD shop, machinists have a peculiar word for copper: "gummy." This isn't about taste or texture, but about its unique and often challenging workability. During subtractive processes like milling or drilling, copper has a tendency to be "sticky," a trait machinists call galling.</p>
+            <p>To counter this, you must always use exceptionally sharp tools, often with a high rake angle and polished flutes, and never cut the material dry. Without proper lubrication, the cutting action can degrade into rubbing. When that happens, the copper can cold-weld itself to the tool's edge, causing material to build up, making the cutting progressively harder. This compounds with copper's high ductility. Instead of being cleanly cut, the soft metal gets smeared like peanut butter, causing the part to flex and "walk" in its fixture. This can destroy accuracy or, in a worst-case scenario, send the entire piece flying from the vise.</p>
+            <p>In short, copper is gummy with a tendency to walk. Machining it can be a nail-biting affair. But the stress is worth it. Copper has a grand, golden metallic sheen—the same quality that must have drawn in the first humans who saw it glowing in its native form. It was one of the first materials ever worked by our ancestors, and here we are, over 10,000 years later, still shaping it for our most advanced technologies.</p>
+            <div class="choice-section" id="gummy-path-choice">
+                 <p class="caption">This entire project is about protecting a quantum state. But what is that, exactly?</p>
+                 <button class="choice-button" onclick="makeChoice('gummy-path-choice', 'explanation')">Explain Superposition & Decoherence</button>
+            </div>
+            <button class="back-button" onclick="goBack()">Go Back</button>
         </section>
         
         <section id="explanation" class="content-section interactive-section">
@@ -260,6 +299,7 @@
             <p>Imagine a spinning coin. Before it lands, it's not truly heads and it's not truly tails—it's in a fuzzy, probabilistic combination of both. This is the essence of <strong>superposition</strong>. A qubit, the fundamental unit of quantum information, can be a 0, a 1, or both at the same time, holding vastly more information than a classical bit.</p>
             <p>This powerful state, however, is incredibly fragile. The slightest interaction with the outside world—a single stray photon, a tiny vibration, a fluctuation in a magnetic field—can "observe" the qubit and force it to choose a state. The coin lands. The superposition is lost, and the quantum information "decoheres" into a boring, classical 0 or 1. This collapse is called <strong>decoherence</strong>.</p>
             <p>The shield built for Professor Zhelev's lab is an act of extreme preservation. By blocking out all external noise, it allows the qubits to remain on their quantum tightrope, in a state of pure superposition, for as long as possible, giving scientists a precious window to perform their experiments.</p>
+             <button class="back-button" onclick="goBack()">Go Back</button>
              <button class="restart-button" onclick="location.reload()">Start the Experiment Over</button>
         </section>
         
@@ -272,9 +312,84 @@
          * It uses a standard 'DOMContentLoaded' event to kick things off reliably.
          */
 
+        let pathHistory = [];
+
+        function goBack() {
+            const duration = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--transition-duration')) * 1000;
+
+            if (pathHistory.length <= 1) {
+                // At the beginning, so just reset the first choice
+                const choiceSection = document.getElementById('path-choice');
+                choiceSection.style.pointerEvents = 'auto';
+                const buttons = choiceSection.getElementsByClassName('choice-button');
+                for (let button of buttons) {
+                    button.classList.remove('chosen', 'faded');
+                }
+                // Hide the section that was chosen
+                const sectionToHideId = pathHistory.pop();
+                const sectionToHide = document.getElementById(sectionToHideId);
+                if(sectionToHide) {
+                    sectionToHide.classList.remove('visible');
+                    setTimeout(() => {
+                        sectionToHide.style.display = 'none';
+                    }, duration);
+                }
+                pathHistory = ['path-choice'];
+                document.getElementById('intro').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                return;
+            }
+
+            // Pop the current section from history
+            const currentSectionId = pathHistory.pop();
+            const currentSection = document.getElementById(currentSectionId);
+
+            // The previous section is now the last one in the history
+            const previousSectionId = pathHistory[pathHistory.length - 1];
+            const previousSection = document.getElementById(previousSectionId);
+
+            if (previousSection) {
+                // Scroll to the top of the previous section
+                previousSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            if (currentSection) {
+                currentSection.classList.remove('visible');
+                setTimeout(() => {
+                    currentSection.style.display = 'none';
+                }, duration);
+            }
+
+            if (previousSection) {
+                const choiceSection = previousSection.querySelector('.choice-section') || previousSection;
+                if (choiceSection) {
+                    choiceSection.style.pointerEvents = 'auto';
+                    const buttons = choiceSection.getElementsByClassName('choice-button');
+                    for (let button of buttons) {
+                        button.classList.remove('chosen', 'faded');
+                    }
+                }
+            }
+        }
+
         // This function is called when a user clicks a path or dialogue choice.
         function makeChoice(choiceSectionId, nextSectionId) {
             const choiceSection = document.getElementById(choiceSectionId);
+            const parentSectionId = choiceSection.closest('.content-section')?.id || 'path-choice';
+
+            const parentIndex = pathHistory.indexOf(parentSectionId);
+
+            if (parentIndex !== -1) {
+                const sectionsToHide = pathHistory.splice(parentIndex + 1);
+                sectionsToHide.forEach(sectionId => {
+                    const section = document.getElementById(sectionId);
+                    if (section) {
+                        section.classList.remove('visible');
+                    }
+                });
+            }
+
+            pathHistory.push(nextSectionId);
+            
             const buttons = choiceSection.getElementsByClassName('choice-button');
             
             // Fade out the unchosen buttons and highlight the chosen one.
@@ -303,12 +418,13 @@
         // Run this script once the entire page document is loaded and ready.
         document.addEventListener('DOMContentLoaded', () => {
             // Define the IDs of the sections that should appear on page load.
-            const initialVisibleElements = ['#hero', '#intro', '#path-choice'];
+            const initialVisibleElements = ['hero', 'intro', 'path-choice'];
+            pathHistory = ['path-choice'];
             
             // Use a short timeout to allow the page to render before fading in.
             setTimeout(() => {
-                initialVisibleElements.forEach(selector => {
-                    const element = document.querySelector(selector);
+                initialVisibleElements.forEach(id => {
+                    const element = document.getElementById(id);
                     if (element) {
                         element.classList.add('visible');
                     }
