@@ -36,6 +36,8 @@ get_content "$SOURCE_DIR/10_gamer-path.txt"           >> "$OUTPUT_HTML"
 get_content "$SOURCE_DIR/11_philosopher-path.txt"     >> "$OUTPUT_HTML"
 get_content "$SOURCE_DIR/100_ofad-dialogue.txt"       >> "$OUTPUT_HTML"
 get_content "$SOURCE_DIR/101_flex-dialogue.txt"       >> "$OUTPUT_HTML"
+get_content "$SOURCE_DIR/102_gummy-path.txt"       >> "$OUTPUT_HTML"
+get_content "$SOURCE_DIR/111_the-ultimate-warrior.txt"       >> "$OUTPUT_HTML"
 get_content "$SOURCE_DIR/1000_explanation.txt"        >> "$OUTPUT_HTML"
 
 # 3. Finish with the footer.

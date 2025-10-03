@@ -93,6 +93,8 @@ extract_section "gamer-path"       "$OUTPUT_DIR/10_gamer-path.txt"
 extract_section "philosopher-path" "$OUTPUT_DIR/11_philosopher-path.txt"
 extract_section "ofad-dialogue"    "$OUTPUT_DIR/100_ofad-dialogue.txt"
 extract_section "flex-dialogue"    "$OUTPUT_DIR/101_flex-dialogue.txt"
+extract_section "gummy-path"    "$OUTPUT_DIR/102_gummy-path.txt"
+extract_section "the-ultimate-warrior"    "$OUTPUT_DIR/111_the-ultimate-warrior.txt"
 extract_section "explanation"      "$OUTPUT_DIR/1000_explanation.txt"
 
 # 5. Create Duplicates for Converging Paths (as requested by the node structure)

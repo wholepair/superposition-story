@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shield upgrades for Quantum materials research at the University of Oregon</title>
+    <script>
+        const imagePaths = {
+            hero: 'index_files/intro_image1.jpg',
+            'gamer-path': 'index_files/AdobeStock_78189573.jpeg',
+            'philosopher-path': 'index_files/philosopher-path_image1_AI.png',
+            'ofad-dialogue': 'index_files/ofad-dialogue_image1.png',
+            'old-meets-new': 'index_files/old-meets-new_image1.png',
+            'the-ultimate-warrior': 'index_files/the-ultimate-warrior_image1.png',
+            'flex-dialogue': 'index_files/flex-dialogue_image1.png',
+            'gummy-path': 'index_files/gummy-path_image1.png',
+            explanation: 'index_files/explanation_image1.png'
+        };
+    </script>
     <style>
         :root {
             --transition-duration: 1.2s;
@@ -152,7 +166,7 @@
         <h2>A story in super position</h2>
 
         <figure id="hero" class="interactive-section">
-            <img src="quantum-shield.jpg" alt="A close-up view of the gold-plated copper quantum shield inside the cryogenic experiment setup.">
+            <img data-image-key="hero" id="hero-image" alt="A close-up view of the gold-plated copper quantum shield inside the cryogenic experiment setup.">
             <figcaption class="caption">The interior of the experimental chamber of the BlueFors dilution refrigerator before affixing the newly installed copper shielding.</figcaption>
         </figure>
 
@@ -171,7 +185,7 @@
         <section id="gamer-path" class="content-section interactive-section">
             <h2>Shield Leveled Up: +100 Cryo Defense</h2>
             <figure>
-                <img src="IMG2_Shield.png" alt="The gleaming gold quantum shield.">
+                <img data-image-key="gamer-path" id="gamer-path-image" alt="The gleaming gold quantum shield.">
             </figure>
             <p>In the high-stakes quest of quantum computing, Zhelev's lab just acquired some epic-tier armor. This isn’t your standard vendor gear. Forged by the craftspeople of the OFAD instrumentation shop, this multi-layered, oxygen-free, high thermal conductivity copper shield provides a massive rebuff against environmental damage.</p>
             <p>In the world of quantum mechanics, the main boss isn’t a dragon; it’s decoherence. Stray photons and magnetic fields are like a constant damage-over-time (DoT) effect, corrupting the fragile quantum states, or qubits, that are the heart of the experiment. This new shield is a high-resistance cloak, designed to bring that DoT down to zero.</p>
@@ -188,7 +202,7 @@
         <section id="philosopher-path" class="content-section interactive-section">
             <h2>If a Qubit Decoheres in a Void, Does It Process Information?</h2>
             <figure>
-                <img src="Zen3.png" alt="A part of the shield in its forming tool.">
+                <img data-image-key="philosopher-path" id="philosopher-path-image" alt="A part of the shield in its forming tool.">
             </figure>
             <p>To plumb the universe for depths that reveal its most fundamental properties, you must first build a place of profound emptiness. In the basement of the Lewis Integrative Sciences Building, Zhelev’s lab recently finished constructing a man-made void, a sensory deprivation tank built to study quantum materials and qubits that may someday be part of a quantum computer</p>
             <p>The experiment itself lives inside a dilution refrigerator, an environment cooled to near absolute zero (<20 mK), where the frantic, cosmic dance of atoms is slowed to a near standstill. But even this cold is not enough. The universe is filled with an invisible, incessant chatter: stray photons, cosmic rays, the faint magnetic whispers of the building’s wiring. To a delicate qubit, held in a fragile superposition of states, this noise is a deafening roar that can shatter its quantum coherence in an instant</p>
@@ -204,7 +218,7 @@
         <section id="ofad-dialogue" class="content-section interactive-section">
             <h2>Research Section VI: A Call For Support</h2>
             <figure>
-                <img src="index_files/ofad-dialogue_image1.png" alt="ofad-dialogue_image1.png">
+                <img data-image-key="ofad-dialogue" id="ofad-dialogue-image" alt="ofad-dialogue_image1.png">
                 <figcaption class="caption">ofad-dialogue_image1.png</figcaption>
             </figure>
             <p>A new PhD student, still getting to know the campus's resources, stood at the workbench, looking on as the copper shield was assembled. "Wow, this custom piece for our experiment is perfect! It's so well-made and exactly what I needed. Sure is nice the UO research community has facilities like OFAD for custom work like this."</p>
@@ -221,7 +235,7 @@
         <section id="old-meets-new" class="content-section interactive-section">
             <h2>Where Old Meets New, or, 0s and 1s But Never 2s</h2>
             <figure>
-                <img src="index_files/old-meets-new_image1.png" alt="old-meets-new_image1.png">
+                <img data-image-key="old-meets-new" id="old-meets-new-image" alt="old-meets-new_image1.png">
                 <figcaption class="caption">old-meets-new_image1.png</figcaption>
             </figure>
             <p>A new PhD student, still getting to know the University of Oregon campus, stood at workbench, looking down on the custom copper shield before it was mounted onto the cryostat. “Wow, this is perfect! When we figured out that the cryostat’s off-the-shelf shielding wasn’t going to cut it for studying qubits at the temperature we needed, I was so relieved to learn that a place exists on campus to make a shield to spec like this.”</p>
@@ -242,7 +256,7 @@
         <section id="the-ultimate-warrior" class="content-section interactive-section">
             <h2>The Quantum Testbed</h2>
             <figure>
-                <img src="index_files/the-ultimate-warrior_image1.png" alt="A view of the experimental setup.">
+                <img data-image-key="the-ultimate-warrior" id="the-ultimate-warrior-image" alt="A view of the experimental setup.">
                 <figcaption class="caption">A view of the experimental setup.</figcaption>
             </figure>
             <p>Professor Zhelev’s lab is a testbed for quantum materials and a hub for experiential learning. Here, students and researchers work together, pushing the boundaries of what’s possible in the quantum realm. The lab is equipped with a powerful dilution refrigerator and a suite of radio-frequency electronics, allowing for precise communication with the quantum world.</p>
@@ -258,7 +272,7 @@
         <section id="flex-dialogue" class="content-section interactive-section">
             <h2>The Flex</h2>
             <figure>
-                <img src="index_files/flex-dialogue_image1.png" alt="flex-dialogue_image1.png">
+                <img data-image-key="flex-dialogue" id="flex-dialogue-image" alt="flex-dialogue_image1.png">
                 <figcaption class="caption">flex-dialogue_image1.png</figcaption>
             </figure>
             <p>An instrument machinist from the OFAD shop, a person who has spent endless days working in the confines of tolerances along the lines of of thousandths of an inch, removed the bifocals he was wearing to tap tiny metric holes around the edge of a copper flange. He had spent the day carefully assembling the nested layers of an annealed copper shield.</p>
@@ -279,7 +293,7 @@
         <section id="gummy-path" class="content-section interactive-section">
             <h2>The Machinist's Gambit: Taming "Gummy" Copper</h2>
             <figure>
-                <img src="index_files/gamer-path_image1.png" alt="A schematic of the quantum shield.">
+                <img data-image-key="gummy-path" id="gummy-path-image" alt="A schematic of the quantum shield.">
                 <figcaption class="caption">Even the most advanced designs rely on fundamental machining skill.</figcaption>
             </figure>
             <p>It might sound strange, but in the OFAD shop, machinists have a peculiar word for copper: gummy. This isn't about taste or texture, but about its unique and often challenging workability. During subtractive processes like milling or drilling, copper has a tendency to be “sticky,” a trait machinists call galling.</p>
@@ -295,7 +309,7 @@
         <section id="explanation" class="content-section interactive-section">
             <h2>The Quantum Tightrope</h2>
             <figure>
-                <img src="index_files/explanation_image1.png" alt="explanation_image1.png">
+                <img data-image-key="explanation" id="explanation-image" alt="explanation_image1.png">
                 <figcaption class="caption">explanation_image1.png</figcaption>
             </figure>
             <p>Imagine a spinning coin. Before it lands, it's not truly heads and it's not truly tails—it's in a fuzzy, probabilistic combination of both. This is the essence of <strong>superposition</strong>. A qubit, the fundamental unit of quantum information, can be a 0, a 1, or both at the same time, holding vastly more information than a classical bit.</p>
@@ -316,17 +330,40 @@
 
         let pathHistory = [];
 
+        function updateGoBackButtons() {
+            // Hide all back buttons
+            const allBackButtons = document.querySelectorAll('.back-button');
+            allBackButtons.forEach(button => {
+                button.style.display = 'none';
+            });
+
+            // Show the back button for the last section in history
+            if (pathHistory.length > 1) {
+                const lastSectionId = pathHistory[pathHistory.length - 1];
+                const lastSection = document.getElementById(lastSectionId);
+                if (lastSection) {
+                    const backButton = lastSection.querySelector('.back-button');
+                    if (backButton) {
+                        backButton.style.display = 'block';
+                    }
+                }
+            }
+        }
+
         function goBack() {
             const duration = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--transition-duration')) * 1000;
 
             if (pathHistory.length <= 1) {
-                // At the beginning, so just reset the first choice
-                const choiceSection = document.getElementById('path-choice');
-                choiceSection.style.pointerEvents = 'auto';
-                const buttons = choiceSection.getElementsByClassName('choice-button');
-                for (let button of buttons) {
+                // At the beginning, so reset all choice sections
+                const allChoiceSections = document.querySelectorAll('.choice-section, #path-choice');
+                allChoiceSections.forEach(section => {
+                    section.style.pointerEvents = 'auto';
+                });
+
+                const allChoiceButtons = document.querySelectorAll('.choice-button');
+                allChoiceButtons.forEach(button => {
                     button.classList.remove('chosen', 'faded');
-                }
+                });
                 // Hide the section that was chosen
                 const sectionToHideId = pathHistory.pop();
                 const sectionToHide = document.getElementById(sectionToHideId);
@@ -338,6 +375,7 @@
                 }
                 pathHistory = ['path-choice'];
                 document.getElementById('intro').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                updateGoBackButtons();
                 return;
             }
 
@@ -371,6 +409,7 @@
                     }
                 }
             }
+            updateGoBackButtons();
         }
 
         // This function is called when a user clicks a path or dialogue choice.
@@ -413,12 +452,22 @@
                     // Just add the .visible class. The CSS handles the animation.
                     nextSection.classList.add('visible');
                     nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    updateGoBackButtons();
                 }
             }, 800);
         }
 
         // Run this script once the entire page document is loaded and ready.
         document.addEventListener('DOMContentLoaded', () => {
+            // Set image sources
+            const images = document.querySelectorAll('[data-image-key]');
+            images.forEach(img => {
+                const key = img.getAttribute('data-image-key');
+                if (imagePaths[key]) {
+                    img.src = imagePaths[key];
+                }
+            });
+
             // Define the IDs of the sections that should appear on page load.
             const initialVisibleElements = ['hero', 'intro', 'path-choice'];
             pathHistory = ['path-choice'];
@@ -431,6 +480,7 @@
                         element.classList.add('visible');
                     }
                 });
+                updateGoBackButtons();
             }, 100); // A brief 100ms delay.
         });
     </script>
